@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-08-29 14:39:11
  * @LastEditors: lichen39 lichen39@58.com
- * @LastEditTime: 2023-03-23 15:01:11
+ * @LastEditTime: 2023-03-23 18:01:05
  * @FilePath: /workflow-react/src/views/setting/index.js
  */
 import { useEffect, useState } from "react";
@@ -26,8 +26,10 @@ function Setting(props) {
     let [workFlowDef, setWorkFlowDef] = useState({})
     let [flowPermission, setFlowPermission] = useState([])
     let [directorMaxLevel, setDirectorMaxLevel] = useState(0)
-    const [search] = useSearchParams();;
-    useEffect(() => initData, [])
+    const [search] = useSearchParams();
+    useEffect(() => {
+        initData()
+    }, [])
     const initData = async () => {
         let { data } = await getWorkFlowData({ workFlowDefId: search.get('workFlowDefId') })
         setProcessConfig(data)

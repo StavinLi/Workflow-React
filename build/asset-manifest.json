@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Workflow-React/build/static/css/main.02fd7e19.css",
-    "main.js": "/Workflow-React/build/static/js/main.ae5eabbd.js",
+    "main.js": "/Workflow-React/build/static/js/main.f48210cb.js",
     "static/media/loading.gif": "/Workflow-React/build/static/media/loading.8b17ce6ea7637893676a.gif",
     "index.html": "/Workflow-React/build/index.html",
     "main.02fd7e19.css.map": "/Workflow-React/build/static/css/main.02fd7e19.css.map",
-    "main.ae5eabbd.js.map": "/Workflow-React/build/static/js/main.ae5eabbd.js.map"
+    "main.f48210cb.js.map": "/Workflow-React/build/static/js/main.f48210cb.js.map"
   },
   "entrypoints": [
     "static/css/main.02fd7e19.css",
-    "static/js/main.ae5eabbd.js"
+    "static/js/main.f48210cb.js"
   ]
 }

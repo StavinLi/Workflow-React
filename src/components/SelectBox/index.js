@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-08-25 14:05:59
  * @LastEditors: lichen39 lichen39@58.com
- * @LastEditTime: 2023-03-23 10:22:54
+ * @LastEditTime: 2023-03-23 17:57:34
  * @FilePath: /workflow-react/src/components/SelectBox/index.js
  */
 import iconRole from '@/assets/images/icon_role.png'
@@ -16,22 +16,22 @@ export default function SelectBox(props){
       return elem.data.map(item=> (<li key={item.roleId} className={`check_box ${elem.isActive && elem.isActive(item)? 'active': ''} ${elem.not? 'not': ''}`}
         onClick={()=>elem.change(item)}>
         <a title={item.description} className={elem.isActiveItem && elem.isActiveItem(item)? 'active': ''}>
-          <img src={iconRole} />{item.roleName}
+          <img src={iconRole} alt=""/>{item.roleName}
         </a>
       </li>))
     }else if(elem.type === 'department'){
       return elem.data.map(item=> (<li key={item.id} className={`check_box ${!elem.isDepartment? 'not': ''}`}>
         {
           elem.isDepartment? (<a className={elem.isActive(item)? 'active': ''} onClick={()=>elem.change(item)}>
-            <img src={iconFile}/>{item.departmentName}</a>):
-            (<a><img src={iconFile} />{item.departmentName}</a>)
+            <img src={iconFile} alt=""/>{item.departmentName}</a>):
+            (<a><img src={iconFile} alt="" />{item.departmentName}</a>)
         }
         <i onClick={()=> elem.next(item)}>下级</i>
       </li>))
     }else if(elem.type === 'employee'){
       return elem.data.map(item=> ( <li key={item.id} className="check_box">
       <a className={elem.isActive(item)? 'active': ''} onClick={()=> {elem.change(item)}} title={item.departmentNames}>
-        <img src={iconPeople} />{item.employeeName}
+        <img src={iconPeople} alt="" />{item.employeeName}
       </a>
   </li>))
     }

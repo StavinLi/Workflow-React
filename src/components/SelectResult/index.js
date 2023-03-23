@@ -10,7 +10,7 @@ export default function SelectResult(props){
         if(type === 'role') {
             return data.map(item=> (
                 <li key={item.roleId}>
-                    <img src={iconRole}/>
+                    <img src={iconRole} alt=""/>
                     <span>{item.roleName}</span>
                     <img src={iconCancel} onClick={()=>cancel(item)}/>
                 </li>
@@ -18,17 +18,17 @@ export default function SelectResult(props){
         }else if(type === 'department'){
             return data.map(item=> (
                 <li key={item.id}>
-                    <img src={iconFile}/>
+                    <img src={iconFile} alt=""/>
                     <span>{item.departmentName}</span>
-                    <img src={iconCancel} onClick={()=>cancel(item)}/>
+                    <img src={iconCancel} onClick={()=>cancel(item)} alt=""/>
                 </li>
             ))
         }else if(type === 'employee'){
             return data.map(item=> (
                 <li key={item.id}>
-                    <img src={iconPeople} />
+                    <img src={iconPeople} alt="" />
                     <span>{item.employeeName}</span>
-                    <img src={iconCancel} onClick={()=>cancel(item)}/>
+                    <img src={iconCancel} onClick={()=>cancel(item)} alt=""/>
                 </li>
             ))
         }

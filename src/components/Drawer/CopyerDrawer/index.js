@@ -1,7 +1,7 @@
 /*
  * @Date: 2023-03-15 17:56:12
  * @LastEditors: lichen39 lichen39@58.com
- * @LastEditTime: 2023-03-23 10:29:48
+ * @LastEditTime: 2023-03-23 17:57:29
  * @FilePath: /workflow-react/src/components/Drawer/CopyerDrawer/index.js
  */
 import { useEffect, useState } from 'react'
@@ -53,7 +53,7 @@ export default function CopyerDrawer(props){
                 <Button type="primary" onClick={addCopyer}>添加成员</Button>
                 <p className="selected_list">
                     {config.nodeUserList.map((item,index)=> (<span key={index}>{item.name}
-                        <img src={closeIcon} onClick={()=>removeEle(config.nodeUserList,item,'targetId')}/>
+                        <img src={closeIcon} onClick={()=>removeEle(config.nodeUserList,item,'targetId')} alt=""/>
                     </span>))}
                     {config.nodeUserList.length!=0? <a onClick={()=>config.nodeUserList=[]}>清除</a>:''}
                 </p>

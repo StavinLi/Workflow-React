@@ -104,7 +104,7 @@ export default function ApproverDrawer(props) {
                                 {
                                     config.nodeUserList.map((item, index) => (<>
                                         <span key={index}>{item.name}
-                                            <img src={closeIcon} onClick={() => removeNodeUserList(item)} />
+                                            <img src={closeIcon} onClick={() => removeNodeUserList(item)} alt=""/>
                                         </span>
                                     </>))
                                 }
@@ -136,7 +136,7 @@ export default function ApproverDrawer(props) {
                     {config.selectRange == 3 ? <Button type="primary" onClick={addRoleApprover}>添加/修改角色</Button> : ''}
                     {(config.selectRange == 2 || config.selectRange == 3) ? (<p className="selected_list">
                         {config.nodeUserList.map((item, index) => (<span key={index}>{item.name}
-                            <img src={closeIcon} onClick={() => removeNodeUserList(item)} />
+                            <img src={closeIcon} onClick={() => removeNodeUserList(item)} alt=""/>
                         </span>))}
                         {config.nodeUserList.length != 0 && config.selectRange != 1 ? <a onClick={clearNodeUserList}>清除</a> : ''}
                     </p>) : ''}

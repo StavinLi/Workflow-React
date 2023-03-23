@@ -1,11 +1,11 @@
 /*
  * @Date: 2022-08-25 14:06:59
  * @LastEditors: lichen39 lichen39@58.com
- * @LastEditTime: 2023-03-23 10:28:27
+ * @LastEditTime: 2023-03-23 18:01:35
  * @FilePath: /workflow-react/src/api/index.js
  */
 import http from '@/utils/axios'
-let baseUrl = process.env.NODE_ENV === 'production'? '/':'/'
+let baseUrl = process.env.NODE_ENV === 'production'? '/Workflow-React/build/':'/'
 
 /**
  * 获取角色

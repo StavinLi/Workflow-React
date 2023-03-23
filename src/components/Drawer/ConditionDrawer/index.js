@@ -204,7 +204,7 @@ export default function ConditionDrawer(props) {
                     {
                         nodeUserList.length == 0 
                         ? <p class="like_input" onClick={addConditionRole}>{nodeUserList.length === 0?'请选择具体人员/角色/部门':''}</p> 
-                        : nodeUserList.map((item1, index1) => <span key={index1}>{item1.name}<img src={closeIcon} onClick={() => delUser(item1)} /></span>)
+                        : nodeUserList.map((item1, index1) => <span key={index1}>{item1.name}<img src={closeIcon} onClick={() => delUser(item1)} alt="" /></span>)
                     }
                 </div>
             </div>)
