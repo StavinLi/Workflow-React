@@ -1,0 +1,60 @@
+.ant-confirm-body{
+  padding: 30px 20px;
+  .ant-confirm-title {
+    color: rgba(0, 0, 0, .85);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    display: block;
+    overflow: hidden
+  }
+  .ant-confirm-content {
+    margin-left: 38px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, .65);
+    margin-top: 8px
+  }
+  &>.anticon {
+    font-size: 22px;
+    margin-right: 16px;
+    float: left
+  }
+}
+
+
+.error-modal{
+  &-desc {
+    font-size: 13px;
+    color: rgba(25, 31, 37, .56);
+    line-height: 22px;
+    margin-bottom: 14px
+  }
+  &-list {
+    height: 200px;
+    overflow-y: auto;
+    margin-right: -25px;
+    padding-right: 25px
+  }
+  &-item {
+    padding: 10px 20px;
+    line-height: 21px;
+    background: #f6f6f6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    &-label {
+      flex: none;
+      font-size: 15px;
+      color: rgba(25, 31, 37, .56);
+      padding-right: 10px
+    }
+    &-content {
+      text-align: right;
+      flex: 1;
+      font-size: 13px;
+      color: #191f25
+    }
+  }
+}

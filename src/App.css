@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+.clear:before,
+.clear:after {
+  content: " ";
+  display: table;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.clear:after {
+  clear: both;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.l {
+  float: left;
 }
 
-.App-link {
-  color: #61dafb;
+.ml_10 {
+  margin-left: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mr_10 {
+  margin-right: 10px;
+}
+
+.radio_box a,
+.check_box a {
+  font-size: 12px;
+  position: relative;
+  padding-left: 20px;
+  margin-right: 30px;
+  cursor: pointer;
+  color: #333;
+  white-space: pre;
+}
+
+.check_box.not a:hover {
+  color: #333;
+}
+
+.check_box.not a::before,
+.check_box.not a:hover::before {
+  border: none;
+}
+
+.check_box.not.active {
+  background: #f3f3f3;
+}
+
+.radio_box a:hover::before,
+.check_box a:hover::before {
+  border: 1px solid #46a6fe;
+}
+
+.radio_box a::before,
+.check_box a::before {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #dcdfe6;
+  border-radius: 2px;
+  left: 0;
+  top: 1px;
+  content: "";
+}
+
+.radio_box a::before {
+  border-radius: 50%;
+}
+
+.check-dot.active::after,
+.radio_box a.active::after,
+.check_box a.active::after {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  content: "";
+}
+
+.radio_box a.active::after {
+  background: #46a6fe;
+}
+
+.check_box a.active::after {
+  background: url(@/assets/images/check_box.png) no-repeat center;
 }

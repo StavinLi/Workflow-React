@@ -1,0 +1,119 @@
+.ant-drawer-header {
+    margin-bottom: 0 !important;
+    padding: 14px 0 14px 20px !important;
+    border-bottom: none !important;
+    color: #323232 !important;
+    font-size: 16px !important;
+}
+.ant-drawer-header .ant-drawer-title{
+    font-size: 16px !important;
+    font-weight: normal !important;
+}
+.ant-drawer-body{
+    padding: 0 !important;
+}
+.demo-drawer-content {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+}
+
+.drawer_content {
+    flex: 1 !important;
+}
+
+.demo-drawer-content>div {
+    border-top: 1px solid #F2F2F2 !important;
+}
+
+.ant-btn {
+    min-width: 79px !important;
+    padding: 8px 12px !important;
+    font-size: 12px !important;
+    border-radius: 2px !important;
+    color: #323232 !important;
+    background: #f2f2f2 !important;
+    height: 30px !important;
+    line-height: 1 !important;
+}
+
+.ant-btn.ant-btn-primary {
+    background: #46A6FE !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.demo-drawer-footer {
+    padding: 10px 30px !important;
+    border-top: 1px solid #F2F2F2 !important;
+}
+
+.demo-drawer-footer .ant-btn {
+    float: right !important;
+    margin-right: 10px !important;
+}
+
+.ant-modal {
+    width: 520px;
+    &-content{
+        padding: 0 !important;
+        border: 1px solid #DDE1E5 !important;
+        border-radius: 3px !important;
+        .ant-modal-close{
+            height: 12px !important;
+            width: 12px !important;
+        }
+        .ant-icon-close {
+            display: block;
+            width: 12px !important;
+            height: 12px !important;
+            background: url(~@/assets/images/add-close.png) no-repeat center !important;
+            background-size: 100% 100% !important;
+        }
+    }
+    &-header {
+        margin-bottom: 0 !important;
+        padding: 0 0 0 20px !important;
+        line-height: 50px !important;
+        height: 50px !important;
+        background: #fff !important;
+        border-bottom: 1px solid #F2F2F2 !important;
+        .ant-modal-title {
+            font-size: 16px !important;
+            line-height: 50px !important;
+            color: #333333 !important;
+            font-weight: normal !important;
+        }
+    }
+    &-footer {
+        margin-top: 0 !important;
+        border-top: 1px solid #F2F2F2 !important;
+        padding-bottom: 10px !important;
+        padding: 10px 20px 20px;
+        text-align: right;
+    }
+}
+
+
+.ant-drawer-body {
+    padding: 0 !important;
+}
+
+.ant-checkbox-wrapper,
+.ant-checkbox-input.is-checked+.ant-checkbox-label,
+.ant-radio-wrapper,
+.ant-radio-input.is-checked+.ant-radio-label,
+.ant-tree {
+    font-weight: 500;
+    color: #333 !important;
+}
+
+.ant-radio+*, .ant-checkbox+* {
+    font-size: 12px !important;
+}
+.my-ant-custom-spinner {
+    display: inline-block !important;
+    width: 80px !important;
+    height: 80px !important;
+    background: url(~@/assets/images/loading.gif) no-repeat center !important;
+}

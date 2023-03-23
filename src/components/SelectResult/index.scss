@@ -1,0 +1,37 @@
+.select-result {
+  width: 276px;
+  height: 100%;
+  font-size: 12px;
+  ul {
+    height: 460px;
+    overflow-y: auto;
+    li {
+      margin: 11px 26px 13px 19px;
+      line-height: 17px;
+      span {
+        vertical-align: middle;
+      }
+      img {
+        &:first-of-type {
+          width: 14px;
+          vertical-align: middle;
+          margin-right: 5px;
+        }
+        &:last-of-type {
+          float: right;
+          margin-top: 2px;
+          width: 14px;
+        }
+      }
+    }
+  }
+  p {
+    padding-left: 19px;
+    padding-right: 20px;
+    line-height: 37px;
+    border-bottom: 1px solid #f2f2f2;
+    a {
+      float: right;
+    }
+  }
+}
