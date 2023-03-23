@@ -17,13 +17,13 @@ export default function ConditionDrawer(props) {
     let [conditions, setConditions] = useState([])
     let [conditionList, setConditionList] = useState([])
     let [checkedList, setCheckedList] = useState([])
-    let [PriorityLevel, setPriorityLevel] = useState('')
+    let [priorityLevel, setPriorityLevel] = useState('')
     let [conditionRoleVisible, setConditionRoleVisible] = useState(false)
 
     useEffect(() => {
         if (!conditionsConfig1.value) return
-        let { value } = conditionsConfig1
-        let { priorityLevel, conditionNodes} = value
+        let { value, priorityLevel } = conditionsConfig1
+        let { conditionNodes} = value
         setConfigs(value)
         setPriorityLevel(priorityLevel)
         setConfig(priorityLevel ? conditionNodes[priorityLevel - 1] : { nodeUserList: [], conditionList: [] })
@@ -144,18 +144,22 @@ export default function ConditionDrawer(props) {
         setConfig(data)
         setConditionVisible(false)
     }
+    const changePriortyLevel = (priorityLevel)=> {
+        setConfig({...config, priorityLevel})
+    }
     const saveCondition = () => {
         closeDrawer()
-        var a = configs.conditionNodes.splice(PriorityLevel - 1, 1)//截取旧下标
-        configs.conditionNodes.splice(config.priorityLevel - 1, 0, a[0])//填充新下标
-        configs.conditionNodes.map((item, index) => {
+        let { conditionNodes } = configs
+        var a = conditionNodes.splice(config.priorityLevel - 1, 1)//截取旧下标
+        conditionNodes.splice(priorityLevel - 1, 0, a[0])//填充新下标
+        conditionNodes.map((item, index) => {
             item.priorityLevel = index + 1
         });
-        for (var i = 0; i < configs.conditionNodes.length; i++) {
-            configs.conditionNodes[i].error = conditionStr(configs, i) == "请设置条件" && i != configs.conditionNodes.length - 1
+        for (var i = 0; i < conditionNodes.length; i++) {
+            conditionNodes[i].error = conditionStr({conditionNodes}, i) == "请设置条件" && i != conditionNodes.length - 1
         }
         setConditionsConfig({
-            value: configs,
+            value: {...configs, conditionNodes},
             flag: true,
             id: conditionsConfig1.id
         })
@@ -237,12 +241,7 @@ export default function ConditionDrawer(props) {
             </div>)
         }
     }
-    const changePriortyLevel = (priorityLevel)=> {
-        setConfig({
-            ...config,
-            priorityLevel
-        })
-    }
+    
     let icon = <span className="ant-icon-close"></span>
     let extra = () => {
         let list = Array.from({length: configs.conditionNodes.length},(_,i)=>({value: i+1, label: `优先级${i+1}`}))

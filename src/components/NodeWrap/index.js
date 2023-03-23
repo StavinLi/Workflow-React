@@ -209,7 +209,7 @@ let NodeWrap = (props) => {
                             : <span className="editable-title" onClick={()=>clickEvent()}>{config.nodeName}</span>}
                         <i className="anticon anticon-close close" onClick={delNode}></i></>)}
                 </div>
-                <div className="content" onClick={setPerson}>
+                <div className="content" onClick={()=>setPerson}>
                     <div className="text">
                         {!showText ? <span className="placeholder">请选择{defaultText}</span> : showText}
                     </div>
