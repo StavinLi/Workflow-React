@@ -1,6 +1,6 @@
 /*
  * @Date: 2023-03-15 17:56:12
- * @LastEditors: lichen39 lichen39@58.com
+ * @LastEditors: StavinLi 495727881@qq.com
  * @LastEditTime: 2023-03-23 10:25:02
  * @FilePath: /workflow-react/src/components/addNode/index.js
  */
