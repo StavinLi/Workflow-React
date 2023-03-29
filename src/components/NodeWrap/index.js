@@ -1,6 +1,13 @@
+/*
+ * @Date: 2023-03-15 17:56:12
+ * @LastEditors: StavinLi 495727881@qq.com
+ * @LastEditTime: 2023-03-29 15:37:55
+ * @FilePath: /workflow-react/src/components/NodeWrap/index.js
+ */
 import { useEffect, useId, useState } from "react";
 import { cloneDeep } from 'lodash'
 import { Input } from 'antd'
+import { bgColors, placeholderList } from '@/utils/const'
 import { arrToStr, setApproverStr, copyerStr, conditionStr } from "@/utils/index";
 import AddNode from '@/components/AddNode'
 import './index.scss'
@@ -10,8 +17,6 @@ let NodeWrap = (props) => {
     let { isTried, flowPermission1, approverConfig1, copyerConfig1, conditionsConfig1, setPromoter, setApprover,
         setCopyer, setCondition, setFlowPermission, setApproverConfig, setCopyerConfig, setConditionsConfig } = store
     let _uid = useId();
-    let bgColors = ['87, 106, 149', '255, 148, 62', '50, 150, 250']
-    let placeholderList = ["发起人", "审核人", "抄送人"];
     let [config, setConfig] = useState({ nodeUserList: [] })
     let [defaultText, setDefaultText] = useState('')
     let [showText, setShowText] = useState('')

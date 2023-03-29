@@ -1,3 +1,13 @@
+/*
+ * @Date: 2023-03-21 16:25:38
+ * @LastEditors: StavinLi 495727881@qq.com
+ * @LastEditTime: 2023-03-29 15:34:38
+ * @FilePath: /workflow-react/src/utils/const.js
+ */
+
+export let bgColors = ['87, 106, 149', '255, 148, 62', '50, 150, 250']
+
+export let placeholderList = ["发起人", "审核人", "抄送人"];
 
 export let setTypes = [
   {value: 1, label: '指定成员'},
