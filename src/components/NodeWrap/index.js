@@ -1,7 +1,7 @@
 /*
  * @Date: 2023-03-15 17:56:12
  * @LastEditors: StavinLi 495727881@qq.com
- * @LastEditTime: 2023-03-29 15:37:55
+ * @LastEditTime: 2023-04-12 19:00:48
  * @FilePath: /workflow-react/src/components/NodeWrap/index.js
  */
 import { useEffect, useId, useState } from "react";
@@ -49,16 +49,24 @@ let NodeWrap = (props) => {
         if (flowPermission1.flag && flowPermission1.id === _uid) {
             updateEvent(flowPermission1.value)
         }
+    }, [flowPermission1])
+    useEffect(() => {
         if (approverConfig1.flag && approverConfig1.id === _uid) {
             changeEvent(approverConfig1.value)
         }
+    }, [approverConfig1])
+
+    useEffect(() => {
         if (copyerConfig1.flag && copyerConfig1.id === _uid) {
             changeEvent(copyerConfig1.value)
         }
+    }, [copyerConfig1])
+
+    useEffect(() => {
         if (conditionsConfig1.flag && conditionsConfig1.id === _uid) {
             changeEvent(conditionsConfig1.value)
         }
-    }, [flowPermission1, approverConfig1, copyerConfig1, conditionsConfig1])
+    }, [conditionsConfig1])
 
     const resetConditionNodesErr = () => {
         for (var i = 0; i < config.conditionNodes.length; i++) {
@@ -214,7 +222,7 @@ let NodeWrap = (props) => {
                             : <span className="editable-title" onClick={()=>clickEvent()}>{config.nodeName}</span>}
                         <i className="anticon anticon-close close" onClick={delNode}></i></>)}
                 </div>
-                <div className="content" onClick={()=>setPerson}>
+                <div className="content" onClick={() => setPerson()}>
                     <div className="text">
                         {!showText ? <span className="placeholder">请选择{defaultText}</span> : showText}
                     </div>
