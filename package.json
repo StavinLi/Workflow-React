@@ -37,7 +37,8 @@
     "jest-watch-typeahead": "^1.0.0",
     "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.4.5",
-    "node-sass": "^8.0.0",
+    "sass": "^1.62.1",
+    "sass-loader": "^11.1.1",
     "postcss": "^8.4.4",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-loader": "^6.2.1",
@@ -55,7 +56,6 @@
     "redux": "^4.2.1",
     "resolve": "^1.20.0",
     "resolve-url-loader": "^4.0.0",
-    "sass-loader": "^12.6.0",
     "semver": "^7.3.5",
     "source-map-loader": "^3.0.0",
     "style-loader": "^3.3.1",
@@ -69,6 +69,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
+    "dev": "node scripts/start.js",
     "serve": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"
