@@ -84,10 +84,11 @@ function Setting(props) {
             setVisible(true)
             return;
         }
-        setProcessConfig({ ...processConfig, flowPermission })
+        let processRes = { ...processConfig, flowPermission, nodeConfig }
+        setProcessConfig(processRes)
         // eslint-disable-next-line no-console
-        console.log(JSON.stringify(processConfig));
-        let res = await setWorkFlowData(processConfig);
+        console.log(JSON.stringify(processRes));
+        let res = await setWorkFlowData(processRes);
         if (res.code === 200) {
             message.success("设置成功")
             setTimeout(function () {

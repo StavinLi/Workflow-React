@@ -116,10 +116,10 @@ export default function ApproverDrawer(props) {
                 </div>
                 {
                     config.settype == 2 ? (<div className="approver_manager">
-                        <p>
+                        <div>
                             <span>发起人的：</span>
                             <Select className="select" value={config.directorLevel} options={getLevels()} onChange={e => changeHandle(e, 'directorLevel')}></Select>
-                        </p>
+                        </div>
                         <p className="tip">找不到主管时，由上级主管代审批</p>
                     </div>) : ''
                 }
@@ -143,10 +143,10 @@ export default function ApproverDrawer(props) {
                 </div>
                 {config.settype == 7 ? (<div className="approver_manager">
                     <p>审批终点</p>
-                    <p style={{ paddingBottom: 20 }}>
+                    <div style={{ paddingBottom: 20 }}>
                         <span>发起人的：</span>
                         <Select className="select" value={config.examineEndDirectorLevel} options={getLevels(true)} onChange={e => changeHandle(e, 'examineEndDirectorLevel')}></Select>
-                    </p>
+                    </div>
                 </div>) : ''}
                 {(config.settype == 1 && config.nodeUserList.length > 1) || config.settype == 2 || (config.settype == 4 && config.selectMode == 2) ? (<div className="approver_some">
                     <p>多人审批时采用的审批方式</p>
